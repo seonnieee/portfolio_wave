@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+    * {margin: 0; padding:0; box-sizing:border-box;}
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+    html, body, h1, h2, h3, h4, h5, h6, li, p {font-family: 'Open Sans', sans-serif;}
+
+    html, body{width:100%; height:100vh; }
+    ul,li,ol{list-style:none; margin:0; padding:0;}
+    a{text-decoration:none; color:#000;}
+    body::-webkit-scrollbar{display:none;}
+    #upperwrap{width:100%; margin:0 auto; background-color:rgb(243, 242, 247)}
+    /* 우측 사이드 네비게이션 */
+    #menu { position: fixed; z-index: 2; top:50%; right:0; transform:translateY(-50%); }
+    #menu > li {width:70px; height:50px; background-color: rgb(90, 47, 247); text-align: center; border-radius: 15px 0 0 15px; margin-bottom: 5px; transition: 0.5s;}
+    #menu > li > a{width:100%; height:100%; display:block; color:#fff; padding:2px 0px 5px 7px; font-size:22px;}
+    #menu > li > a > span{display:block; font-size:10px; margin-top:3px;}
+    #menu > li:hover{background-color:rgb(36, 19, 131); padding-right:10px;}
+    /* 각 페이지별 상세 */
+    /* 섹션별 크기 설정 */
+    #fullpage .section-01 { width: 100%; margin: 0 auto; position:relative; background-color:#000}
+    #fullpage .section-02 { width: 70%; margin: 0 auto; }
+    #fullpage .section-03 { width: 70%; margin: 0 auto; }
+    #fullpage .section-04 { width: 70%; margin: 0 auto; }
+    #fullpage .section-05 { width: 70%; margin: 0 auto; }
+    #fullpage .section-06 { width: 70%; margin: 0 auto; }
+    #fullpage .section-07 { width: 100%; margin: 0 auto; background:linear-gradient(90deg, #000, #1b1b1b);}
+    /* HOME */
+    #container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 40%;
+        background: linear-gradient(to bottom, #000, #111);
+        transform: translate3d(-50%, -40%, 0);
+      }
+      
+      canvas {
+        display: block;
+      }
+    /* 메인타이틀 */
+    .title {width:1500px; height:200px; position:absolute; top:45%; left:10%; transform:translateY(-50%); text-align: center; color: #fff; font-size:25px;}
+    .title > h2{text-shadow:10px 10px 10px #5c5c5c; font-size:120px; font-weight:bold; margin-bottom:-40px}
+    .title > p{line-height:40px; text-shadow:4px 4px 4px #2c2c2c}
+    /* 왼쪽 아이콘 */
+    .about{position:absolute; top:5%; left:2%; height:90%; display:flex; flex-direction:column; justify-content:space-between; align-items:flex-start;}
+    .about > h3{font-size:17px; color:rgb(90, 47, 247); font-weight:bold;}
+    .about_icon > li {position:relative; z-index:3; background:rgb(90, 47, 247); border-radius:50%; cursor:pointer; text-align:center; margin-bottom:10px;}
+    .about_icon > li > a{width:40px; height:40px; display:flex; align-items:center; justify-content:center; color: #fff; font-size:20px; transition:all 0.3s ease-in-out}
+    .burble{display:none;}
+    .burble > li {position:absolute; top:7px; left:50px; width:160px; line-height:25px; background:rgb(90, 47, 247); font-size:12px; text-align:center; color:#fff; border-radius:10px;}
+
+    /* PROJECT1 REEBOK */
+    .section_inner{width:100%; height:100%; margin:0 auto; display:flex; align-items:center; justify-content:space-around;}
+    .explain {width:40%; height:auto;}    
+    .webpage_img{width:60%; height:100%; position:relative; overflow:hidden;}
+
+    /* 타이틀 */
+    .section_inner > .explain > h1{display:inline-block; border-radius:10px 10px 0px 10px; padding:5px; font-size:22px; font-weight:bold; color:#fff; background:#4163bb;}
+    .section_inner > .explain > h2{display:block; margin-top:25px; font-size:40px; font-weight:bold; color:#4163bb;}
+    .section_inner > .explain > h3{display:block; margin-top:5px; font-size:25px; font-weight:400; color:#252525;}
+    .section_inner > .explain > h4{display:block; margin-top:50px; font-size:16px; font-weight:700; color:#252525;}
+    /* point color */
+    .section_inner > .explain > ul {display:flex; margin-top:5px;}
+    .section_inner > .explain > ul > li{width:25px; height:25px; margin-right:10px; border-radius:50% 50% 50% 3px; box-shadow:inset 1px 1px 2px;}
+    .section_inner > .explain > ul > li:nth-of-type(1){background-color:#244496;}
+    .section_inner > .explain > ul > li:nth-of-type(2){background-color:rgb(243, 27, 27)}
+    .section_inner > .explain > ul > li:nth-of-type(3){background-color:#000}
+    /* 상세설명 */
+    .section_inner > .explain > p{width:70%; font-size:13px; color:#424242; margin-top:40px; line-height:18px;}
+    /* 페이지이동버튼 */
+    .section_inner > .explain > .mainBtn{border:none; border-radius:10px 0px 10px 10px; transition:all 0.3s ease-in-out; background-color:rgb(243,45,45); padding:7px 30px; margin-top:30px; color:#fff; font-size:13px; font-weight:600; cursor:pointer;}
+    .section_inner > .explain > .mainBtn:hover{background-color:rgb(243, 0, 0);}
+    /* 전체페이지이미지 */
+    .section_inner > .webpage_img > img{width:100%;}
+    .section_inner > .webpage_img > .bgbox{width:100%; height:100%; background:rgba(0,0,0,0); display:flex; align-items:center; justify-content:center; position:absolute; top:0; left:0; cursor:pointer; transition:0.3s ease-in-out;}
+    .section_inner > .webpage_img > .bgbox > i {color:#ddd; font-size:40px; display:none;}
+    .section_inner > .webpage_img > .bgbox:hover{background:rgba(0,0,0,0.3)}
+    .section_inner > .webpage_img > .bgbox:hover > i{display:block;}
+
+    /* PROJECT2 KYOBO */
+    /* 타이틀 */
+    .section-03 > .section_inner > .explain > h1{background-color:#4dac27}
+    .section-03 > .section_inner > .explain > h2{color:#4dac27;}
+    /* point color */
+    .section-03 > .section_inner > .explain > ul > li:nth-of-type(1){background-color:#4dac27;}
+    .section-03 > .section_inner > .explain > ul > li:nth-of-type(2){background-color:rgb(71, 76, 152)}
+    .section-03 > .section_inner > .explain > ul > li:nth-of-type(3){background-color:#767676}
+    /* 페이지이동버튼 */
+    .section-03 > .section_inner > .explain > .mainBtn{background-color:rgb(71, 76, 152);}
+    .section-03 > .section_inner > .explain > .mainBtn:hover{background-color:rgb(34, 42, 153);}
+    .section_inner > .explain > .subBtn{border:none; border-radius:10px 0px 10px 10px; transition:all 0.3s ease-in-out; background-color:rgb(108, 115, 223); padding:7px 30px; color:#fff; font-size:13px; font-weight:600; cursor:pointer;}
+    .section_inner > .explain > .subBtn:hover{background-color:rgb(48, 59, 224);}
+
+    /* PROJECT3 - CENTRAL PARK */
+    /* 타이틀 */
+    .section-04 > .section_inner > .explain > h1{background-color:#1c1c4c;}
+    .section-04 > .section_inner > .explain > h2{color:#1c1c4c;}
+    /* point color */
+    .section-04 > .section_inner > .explain > ul > li:nth-of-type(1){background-color:#1c1c4c;}
+    .section-04 > .section_inner > .explain > ul > li:nth-of-type(2){background-color:#f2f0e9}
+    .section-04 > .section_inner > .explain > ul > li:nth-of-type(3){background-color:#fff}
+    /* 페이지이동버튼 */
+    .section-04 > .section_inner > .explain > .mainBtn{background-color:#343466;}
+    .section-04 > .section_inner > .explain > .mainBtn:hover{background-color:#1f1f69;}
+    .section-04 > .section_inner > .explain > .subBtn{background-color:#454586;}
+    .section-04 > .section_inner > .explain > .subBtn:hover{background-color:#2e2ea5;}
+    /* 모바일 화면 */
+    .section-04 > .section_inner{position:relative;}
+    .mobile {position:absolute; background-image: url("../img/phone.png"); background-size: 100% 100%; z-index: 5; width: 235px; height: 490px; top:40%; left:30%; overflow: hidden;} 
+    .mobile > div {position:absolute; width:220px; height:460px; top:17px; left:8px; overflow: hidden; border-radius: 20px;} 
+    .mobile > div > img {width:100%;} 
+
+    /* PROJECT4 - DASIN */
+    /* 타이틀 */
+    .section-05 > .section_inner > .explain > h1{background-color:#d12268;}
+    .section-05 > .section_inner > .explain > h2{color:#d12268;}
+    /* point color */
+    .section-05 > .section_inner > .explain > ul > li:nth-of-type(1){background-color:#d12268;}
+    .section-05 > .section_inner > .explain > ul > li:nth-of-type(2){background-color:#fff}
+    /* 페이지이동버튼 */
+    .section-05 > .section_inner > .explain > .mainBtn{background-color:#d3487f;}
+    .section-05 > .section_inner > .explain > .mainBtn:hover{background-color:#cf0a59;}
+    .section-05 > .section_inner > .explain > .subBtn{background-color:#fa4b91;}
+    .section-05 > .section_inner > .explain > .subBtn:hover{background-color:#fa2077;}
+
+    /* PROJECT5 - Forum */
+    /* 타이틀 */
+    .section-06 > .section_inner > .explain > h1{background-color:#000;}
+    .section-06 > .section_inner > .explain > h2{color:#000;}
+    .section-06 > .section_inner > .explain > h4{margin-top:0px; font-weight:100; font-size:20px;}
+    /* 페이지이동버튼 */
+    .section-06 > .section_inner > .explain > .mainBtn{background-color:#3b3b3b;}
+    .section-06 > .section_inner > .explain > .mainBtn:hover{background-color:#0c0c0c;}
+    .section-06 > .section_inner > .explain > .subBtn{background-color:#6d6a6a;}
+    .section-06 > .section_inner > .explain > .subBtn:hover{background-color:#333333;}
+    /* 비디오 */
+    .webpage_video > video {width:100%;}
+
+    /* ABOUT ME */
+    .section-07 > .section_inner{width:70%; margin:0 auto;}
+    .aboutprofile{width:25%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgb(90, 47, 247)}
+    .aboutprofile > h1{font-size:35px; font-weight:bold; margin-bottom:40px; color:#fff;}
+    .aboutprofile > img {width:200px; height:250px; border-radius:50px 0px 50px 50px;}
+    .aboutmeInfo {width:75%; margin-top:30px; text-align:left;}
+    .aboutmeInfo > h3 {font-size:25px; font-weight:700; margin-bottom:15px; color:#fff;}
+    /* 소개 테이블 */
+    .aboutmeInfo > table {color:rgb(241, 231, 241);}
+    .aboutmeInfo > table th {font-weight:600; font-size:13px; padding:15px 10px 0px 0px;}
+    .aboutmeInfo > table td {padding-top:10px; font-size:14px;}
+    /* 소개글 */
+    .aboutmeInfo > .intro > h3{font-size:20px; font-weight:600; margin-top:40px; color:#fff}
+    .aboutmeInfo > .intro > p {font-size:13px; margin-top:20px; color:rgb(241, 231, 241); line-height:25px; }
+    /* 경력 */
+    .aboutcareer{width:80%; height:90%; display:flex; flex-direction:column; align-items:center; justify-content:center;}
+    /* 그래프 */
+    .graphBox{width:70%; height:auto; text-align:center;}
+    .graphBox > h3 {display:block; font-size:20px; font-weight:700; margin:0px 0px 10px 30px; color:rgb(241, 231, 241)}
+    /* 상세경력사항 */
+    .careerWrap{width:90%; height:auto; display:flex; justify-content:space-between;}
+    .careerBox {width: 47%; height:auto; margin-top:80px;}
+    .careerBox > h3 {width:40%; height:35px; margin-bottom:10px; border-bottom:3px solid rgb(90, 47, 247); color: rgb(255, 255, 255);}
+    .careerBox > ul { margin: 0 0 45px 0; }
+    .careerBox > ul > li {font-size: 14px; line-height: 30px;  font-weight: bold; color:rgb(241, 231, 241) }
+    .bold{margin-right:10px; font-size:13px; font-weight:400;}
+    /* SKILL */
+    .graph  { width: 90%; list-style: none; }
+    .graph li { position: relative; padding: 1px 0; white-space:nowrap; margin:5px 0;}
+    .graph li span  { display: inline-block; position: relative; height: 20px; line-height: 18px; background-image: linear-gradient( to left, transparent, rgb(90, 47, 247)); padding:0 10px; color: #fff; border-radius: 10px;}
